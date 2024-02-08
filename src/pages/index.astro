@@ -7,38 +7,72 @@ import visual from '../../public/images/icon-visual.svg';
 import Tile from '../components/Tile.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/images/favicon-32x32.png" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Results Summary Component</title>
-	</head>
-	<body class="text-lg text-neutral-3 flex items-center justify-center min-h-screen">
-		<main class="grid grid-cols-2 max-w-[46rem] rounded-3xl shadow-xl shadow-neutral-1">
-			<div class="flex flex-col items-center py-10 px-14 justify-between text-neutral-2 gap-8 rounded-3xl bg-gradient-to-b from-blue-1 to-blue-3">
-				<div class="font-bold text-2xl">Your Result</div>
-				<div class="flex flex-col items-center justify-center rounded-full w-48 aspect-square bg-gradient-to-b from-blue-2 to-blue-5">
-					<span class="leading-none text-[5rem] font-extrabold text-white">76</span>
-					of 100</div>
-				<div class="flex flex-col items-center gap-4">
-					<div class="text-[1.75rem] font-bold text-white">Great</div>
-					<div class="text-center">
-						You scored higher than 65% of the people who have taken these tests.
-					</div>
-				</div>
-			</div>
-			<div class="flex flex-col justify-between p-10 ">
-				<div class="font-bold text-2xl">Summary</div>
-				<div class="flex flex-col gap-4">
-					<Tile backgroundColor="bg-red-1" textColor="text-red-1" score="80" name="Reaction" iconSrc={reaction.src} />
-					<Tile backgroundColor="bg-yellow-1" textColor="text-yellow-1" score="92" name="Memory" iconSrc={memory.src} />
-					<Tile backgroundColor="bg-green-1" textColor="text-green-1" score="61" name="Verbal" iconSrc={verbal.src} />
-					<Tile backgroundColor="bg-blue-4" textColor="text-blue-4" score="72" name="Visual" iconSrc={visual.src} />
-				</div>
-				<button class="bg-neutral-3 text-white p-3 rounded-3xl hover:bg-gradient-to-b hover:from-blue-1 hover:to-blue-3">Continue</button>
-			</div>
-		</main>
-	</body>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <link rel='icon' type='image/svg+xml' href='/images/favicon-32x32.png' />
+    <meta name='viewport' content='width=device-width' />
+    <meta name='generator' content={Astro.generator} />
+    <title>Results Summary Component</title>
+  </head>
+  <body class='text-lg text-neutral-3 flex items-center justify-center h-screen'>
+    <main
+      class='flex flex-col sm:grid sm:grid-cols-2 max-w-[46rem] sm:rounded-3xl sm:shadow-xl sm:shadow-neutral-1 h-full sm:h-auto'
+    >
+      <div
+        class='flex flex-col items-center py-10 px-14 justify-between text-neutral-2 gap-8 rounded-b-[50px] sm:rounded-3xl bg-gradient-to-b from-blue-1 to-blue-3'
+      >
+        <div class='font-bold text-2xl'>Your Result</div>
+        <div
+          class='flex flex-col items-center justify-center rounded-full w-56 sm:w-48 aspect-square bg-gradient-to-b from-blue-2 to-blue-5 text-2xl'
+        >
+          <span class='leading-none text-8xl sm:text-[5rem] font-extrabold text-white'>76</span>
+          of 100
+        </div>
+        <div class='flex flex-col items-center gap-4'>
+          <div class='text-4xl sm:text-[1.75rem] font-bold text-white'>Great</div>
+          <div class='text-center text-2xl sm:text-lg pb-6 sm:pb-0'>
+            You scored higher than 65% of the people who have taken these tests.
+          </div>
+        </div>
+      </div>
+      <div class='flex flex-col justify-between p-10 gap-10 sm:gap-0'>
+        <div class='font-bold text-3xl sm:text-2xl'>Summary</div>
+        <div class='flex flex-col gap-7 sm:gap-4'>
+          <Tile
+            backgroundColor='bg-red-1'
+            textColor='text-red-1'
+            score='80'
+            name='Reaction'
+            iconSrc={reaction.src}
+          />
+          <Tile
+            backgroundColor='bg-yellow-1'
+            textColor='text-yellow-1'
+            score='92'
+            name='Memory'
+            iconSrc={memory.src}
+          />
+          <Tile
+            backgroundColor='bg-green-1'
+            textColor='text-green-1'
+            score='61'
+            name='Verbal'
+            iconSrc={verbal.src}
+          />
+          <Tile
+            backgroundColor='bg-blue-4'
+            textColor='text-blue-4'
+            score='72'
+            name='Visual'
+            iconSrc={visual.src}
+          />
+        </div>
+        <button
+          class='bg-neutral-3 text-white p-6 sm:p-3 rounded-[50px] sm:rounded-3xl hover:bg-gradient-to-b hover:from-blue-1 hover:to-blue-3 text-3xl sm:text-lg'
+          >Continue</button
+        >
+      </div>
+    </main>
+  </body>
 </html>
