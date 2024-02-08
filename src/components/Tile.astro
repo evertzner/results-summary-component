@@ -1,0 +1,16 @@
+---
+interface Props {
+  backgroundColor: string;
+  textColor: string;
+  score: string;
+  name: string;
+  iconSrc: string;
+}
+
+const { backgroundColor, textColor, score, name, iconSrc } = Astro.props;
+---
+
+<div class={`flex justify-between ${backgroundColor} bg-opacity-10 p-3 rounded-lg`}>
+  <div class={`flex gap-3 ${textColor}`}><img src={iconSrc} alt={name} />{name}</div>
+  <div class="text-neutral-3 text-opacity-50"><span class="text-neutral-3 text-opacity-100">{score}</span> / 100</div>
+</div>

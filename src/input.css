@@ -1,0 +1,11 @@
+@import '@fontsource-variable/hanken-grotesk';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Hanken Grotesk Variable', sans-serif;
+  }
+}
